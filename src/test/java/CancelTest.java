@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class CancelTest {
 
     @Test
-    public void cancel () throws InterruptedException {
+    public void cancel () {
         LoginPage login = new LoginPage();
         login.openLoginPage();
         login.logIn();

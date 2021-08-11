@@ -7,12 +7,11 @@ public class BuyTest {
 
 
     @Test
-    public void buy () throws InterruptedException {
+    public void buy ()  {
         LoginPage login = new LoginPage();
         login.openLoginPage();
         login.logIn();
         ProductBuyPage product = new ProductBuyPage();
-        Thread.sleep(1000);
         product.adding();
 
         product.buying();

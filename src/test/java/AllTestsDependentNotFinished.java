@@ -1,9 +1,12 @@
+import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.*;
+
 import static com.codeborne.selenide.Condition.visible;
 
 
+
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class AllTestsDependent {
+public class AllTestsDependentNotFinished {
 
 @Test
 @Order(1)
@@ -18,7 +21,7 @@ public class AllTestsDependent {
 
 @Test
 @Order(2)
-  public void buyTest () throws InterruptedException {
+  public void buyTest ()  {
    ProductBuyPage product = new ProductBuyPage();
    product.adding();
    product.buying();
@@ -38,14 +41,14 @@ public class AllTestsDependent {
 
  @Test
  @Order(4)
- public void deleteAllTest () throws InterruptedException {
+ public void deleteAllTest () {
  DeleteAllPage removeAll = new DeleteAllPage();
+
  removeAll.deleteAllFromCart();
- Assertions.assertEquals("", removeAll.value.getText());
+
+ Assertions.assertTrue(removeAll.value.is(Condition.empty));
 
 
 }
-
-
 
 }

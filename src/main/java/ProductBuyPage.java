@@ -13,17 +13,14 @@ public class ProductBuyPage {
     SelenideElement firstName = $(By.id("first-name"));
     SelenideElement lastName = $(By.id("last-name"));
     SelenideElement postalCode = $(By.id("postal-code"));
-    SelenideElement buttonContinue = $("input[type='submit']");
+    SelenideElement buttonContinue = $(By.id("continue"));
     SelenideElement buttonFinish = $("button[data-test='finish']");
     SelenideElement thankMessage = $("span[class='title']");
 
-    void adding () throws InterruptedException {
-        Thread.sleep(1000);
-      for (int i = 0; i < 6; i++) {
-      Thread.sleep(1000);
-        addToCart.get(0).click(); }
+    void adding ()  {
 
-         Thread.sleep(1000);
+      for (int i = 0; i < 6; i++) {
+        addToCart.get(0).click(); }
         cartButton.click(); }
 
     void buying () {

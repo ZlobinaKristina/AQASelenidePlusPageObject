@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class SumTest  extends  ProductBuyPage {
 
     @Test
-   public void sum () throws InterruptedException {
+   public void sum ()  {
 
         LoginPage  login = new LoginPage();
         login.openLoginPage();

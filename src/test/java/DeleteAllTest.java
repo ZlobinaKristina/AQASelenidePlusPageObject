@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class DeleteAllTest {
 
     @Test
-    void deleteAll () throws InterruptedException {
+    void deleteAll ()  {
         LoginPage  login = new LoginPage();
         login.openLoginPage();
         login.logIn();
